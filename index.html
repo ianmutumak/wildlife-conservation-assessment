@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conservation organization promotional video to save our wildlife.">
     <title>Save Our Wildlife</title>
+    <!-- Wildlife theme fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="container">
-        <h1>Save Our Wildlife</h1>
+        <header>
+            <h1>Save Our Wildlife</h1>
+        </header>
         <div class="video-container" id="videoContainer">
             <video id="wildlifeVideo" controls aria-label="Promotional video about wildlife conservation">
                 <source src="wildlife.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <p class="description">
-            Join our efforts to protect endangered species and preserve natural habitats around the world. Every action counts towards a sustainable future.
-        </p>
-        <button id="toggleBtn" aria-expanded="true" aria-controls="wildlifeVideo">Hide Video</button>
+        <div class="content">
+            <p class="description">
+                Join our efforts to protect endangered species and preserve natural habitats around the world. Every action counts towards a sustainable future.
+            </p>
+            <button id="toggleBtn" aria-expanded="true" aria-controls="wildlifeVideo">Hide Video</button>
+        </div>
     </main>
+    <footer>
+        <p>Made by Mv</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

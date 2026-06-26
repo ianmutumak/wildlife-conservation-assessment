@@ -1,49 +1,58 @@
 :root {
-    --primary-color: #2E7D32;
-    --text-color: #333;
-    --bg-color: #f4f4f9;
-    --btn-bg: #1B5E20;
-    --btn-hover: #4CAF50;
-    --focus-ring: #FFC107;
+    --primary-color: #2b5329; /* Forest green */
+    --secondary-color: #5c4033; /* Earthy brown */
+    --text-color: #2c3e2e;
+    --bg-color: #f4efe6; /* Soft earthy sand */
+    --container-bg: #ffffff;
+    --btn-bg: #3e733b;
+    --btn-hover: #2b5329;
+    --focus-ring: #e6a756; /* Subtle sunset orange for focus */
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--bg-color);
+    background-image: radial-gradient(#d3cfc1 1px, transparent 1px);
+    background-size: 20px 20px;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
 }
 
 .container {
     max-width: 800px;
     width: 90%;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #fff;
+    margin: 3rem auto;
+    background: var(--container-bg);
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(43, 83, 41, 0.15);
+    overflow: hidden;
     text-align: center;
+    border-top: 6px solid var(--primary-color);
+}
+
+header {
+    padding: 2rem 1rem 1rem;
 }
 
 h1 {
+    font-family: 'Lora', serif;
     color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: -0.5px;
 }
 
 .video-container {
-    margin: 1.5rem 0;
     width: 100%;
     max-width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
     background: #000;
+    display: flex;
+    justify-content: center;
 }
 
 /* Responsive video */
@@ -52,29 +61,41 @@ video {
     height: auto;
     display: block;
     max-height: 500px;
+    background-color: #000;
+}
+
+.content {
+    padding: 2rem;
 }
 
 .description {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
+    line-height: 1.7;
     margin-bottom: 2rem;
-    color: #555;
+    color: var(--text-color);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
     color: #fff;
     background-color: var(--btn-bg);
     border: none;
-    border-radius: 8px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(62, 115, 59, 0.3);
+    transition: all 0.2s ease;
 }
 
 button:hover {
     background-color: var(--btn-hover);
+    box-shadow: 0 6px 15px rgba(43, 83, 41, 0.4);
+    transform: translateY(-2px);
 }
 
 button:focus-visible {
@@ -90,14 +111,23 @@ button:active {
     display: none !important;
 }
 
+footer {
+    margin-top: auto;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: 'Lora', serif;
+    font-style: italic;
+    opacity: 0.8;
+}
+
 /* Media Query for smaller screens */
 @media (max-width: 600px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
-    .container {
+    .content {
         padding: 1.5rem;
-        margin: 1rem auto;
     }
 }
